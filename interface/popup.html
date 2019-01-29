@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>
+            Video Vault
+        </title>
+        
+        <link href="stylesheets/style.css" rel="stylesheet">
+        <script type="text/javascript" src="scripts/interface.js"></script>
+
+        <!-- PULL MATERIAL ICON FONT -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- GRAB BOOTSTRAP STYLING -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id = "nav-open" class = "vault-nav-arrow hide">
+            <i class="material-icons">
+                keyboard_arrow_right
+            </i>
+        </div>
+        <div class = "vault-navigation open">
+            <center>
+                <ul>
+                    <li id="nav-close-navigation">
+                        <i class="material-icons">
+                            keyboard_arrow_left
+                        </i>                        
+                    </li>
+                    <li class = "nav-item active" context = "list">
+                        <i class="material-icons">
+                            menu
+                         </i>                        
+                     </li>
+                    <li class = "nav-item" context = "add">
+                        <i class="material-icons">
+                            add_box
+                        </i>                        
+                    </li>
+                    <li class = "nav-item" context = "setting">
+                        <i class="material-icons">
+                            settings
+                        </i>                        
+                    </li>
+                </ul>                
+            </center>
+        </div>
+        <div class = "vault-content">
+            <div class = "content active" id = "list">
+                <div class="form-group">
+                    <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="material-icons">
+                                    search
+                                </i>   
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" id="inlineFormInputGroup">
+                    </div>
+                </div>
+            </div>
+            <div class = "content" id = "add">
+                <form>
+                    <div class="form-group">
+                        <label for="new-video-url">Video URL</label>
+                        <input type="text" class="form-control" id="new-video-url" aria-describedby="new-video-help" placeholder="URL">
+                        <small id="new-video-help" class="form-text text-muted">Please enter the new video url above.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-video-title">Title</label>
+                        <input type="text" class="form-control" id="new-video-title" aria-describedby="new-video-title-help" placeholder="Title">
+                        <small id="new-video-title-help" class="form-text text-muted">Please enter a title for the new video.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="new-video-tags">Tags</label>
+                        <input type="text" class="form-control" id="new-video-tags" aria-describedby="new-video-tags-help" placeholder="Tag">
+                        <small id="new-video-tags-help" class="form-text text-muted">Add tags to this video.</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class = "content" id = "setting">
+                setting
+            </div>
+        </div>
+    </body>
+</html>
