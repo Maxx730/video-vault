@@ -3,7 +3,7 @@
     "version": "0.1",
     "description": "Extension used for storing and sharing videos between users and different computers.",
     "manifest_version": 2,
-    "permissions": ["tabs","storage"],
+    "permissions": ["tabs","storage","syncFileSystem"],
 
     "browser_action": {
 

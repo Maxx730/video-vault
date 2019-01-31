@@ -62,10 +62,6 @@
 
 .vault-nav-arrow{
     position:fixed;
-    background:#FFF;
-    border-top:solid 1px #000;
-    border-right:solid 1px #000;
-    border-bottom:solid 1px #000;
     top:1%;
     cursor:pointer;
     padding:10px;
@@ -74,4 +70,39 @@
 
 .hide{
     display:none;
+}
+
+.search-form i{
+    opacity:.3;
+}
+
+input.input-error{
+    border-color:red;
+}
+
+.form-control.input-error:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: red;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+}
+
+.saved-video-list{
+    padding-top:20px;
+}
+
+.video-item:hover{
+    background:#DBDBDB;
+    cursor:pointer;
+}
+
+#modal_shade{
+    background:#000;
+    position:absolute;
+    top:0px;
+    left:0px;
+    opacity:.6;
+    height:100%;
+    width:100%;
 }

@@ -13,12 +13,15 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     </head>
     <body>
-        <div id = "nav-open" class = "vault-nav-arrow hide">
+        <div id = "data">
+
+        </div>
+        <div id = "nav-open" class = "vault-nav-arrow" title="Menu">
             <i class="material-icons">
                 keyboard_arrow_right
             </i>
         </div>
-        <div class = "vault-navigation open">
+        <div class = "vault-navigation">
             <center>
                 <ul>
                     <li id="nav-close-navigation">
@@ -44,10 +47,9 @@
                 </ul>                
             </center>
         </div>
-        <div class = "vault-content">
+        <div class = "vault-content full-width">
             <div class = "content active" id = "list">
-                <div class="form-group">
-                    <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                <div class="form-group search-form">
                     <div class="input-group mb-2">
                         <div class="input-group-prepend">
                             <div class="input-group-text">
@@ -56,13 +58,30 @@
                                 </i>   
                             </div>
                         </div>
-                        <input type="text" class="form-control" id="inlineFormInputGroup">
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search">
                     </div>
+                </div>
+                <div>
+                    <center>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">All Videos</button>
+                            <button type="button" class="btn btn-secondary">Tags</button>
+                        </div>                        
+                    </center>
+                </div>
+                <div class="saved-video-list">
+                    <ul class="list-group" id = "video-list">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <center>
+                              Whoops! No Items in your saved videos list.
+                          </center>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class = "content" id = "add">
                 <form>
-                    <div class="form-group">
+                    <div class="form-group has-error">
                         <label for="new-video-url">Video URL</label>
                         <input type="text" class="form-control" id="new-video-url" aria-describedby="new-video-help" placeholder="URL">
                         <small id="new-video-help" class="form-text text-muted">Please enter the new video url above.</small>
@@ -78,11 +97,36 @@
                         <input type="text" class="form-control" id="new-video-tags" aria-describedby="new-video-tags-help" placeholder="Tag">
                         <small id="new-video-tags-help" class="form-text text-muted">Add tags to this video.</small>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button id="submit-new-video-button" class="btn btn-primary">Save</button>
                 </form>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" id="loading-progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                </div>
             </div>
             <div class = "content" id = "setting">
-                setting
+                <button type="button" class="btn btn-danger" id="purge-data">Purge</button>
+            </div>
+            <div id = "modal_shade" class="hide">
+
+            </div>
+            <div class="modal show fade" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
     </body>
